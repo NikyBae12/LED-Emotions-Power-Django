@@ -33,8 +33,7 @@ class Conexion_LED(models.Model):
 class Sesion_terapia(models.Model):
     Id_sesion = models.IntegerField(primary_key=True)
     Id_conexion = models.ForeignKey(Conexion_LED, null=True, on_delete=models.CASCADE)
-    Id_usuario = models.ForeignKey(Usuario, null=True, on_delete=models.CASCADE)
-    Id_emocion = models.IntegerField()
+    Id_usuario = models.ForeignKey(Usuario, null=True, on_delete=models.CASCADE)    
     fecha_sesi = models.DateField()
     nivel_satif = models.IntegerField()
 
