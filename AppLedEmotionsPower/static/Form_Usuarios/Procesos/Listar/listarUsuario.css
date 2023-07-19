@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    padding-left: 80px;
+    padding-top: 80px;
+    transition: padding-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+main{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+  margin-top: 2%;
+}
+
+
+:root{
+    --purpura_pastel: #6d50e1;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: flex;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-right: 200px;
+    padding-left: 20px;
+
+}
+
+.logo img{
+    width: 200px;
+
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+}
+
+
+.menu nav ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    position: relative;
+}
+
+
+.menu nav ul li a:hover{
+    color: var(--purpura_pastel);
+}
+
+
+/* BOTON BUSQUEDA*/
+
+.container-1{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+  }
+
+
+  .container-1 input#search{
+    width: 300px;
+    height: 50px;
+    background: #4545461e;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 45px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+
+
+    
+  }
+
+
+  .container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+ .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+ .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+ .container-1 input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+ .container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }
+
+  .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+
+
+
+/*BOTON CERRAR SEION*/
+.btn_inicio{
+  padding-left: 10px;
+  display: block;
+  padding: 8px 20px;
+  border: 2px solid var(--purpura_pastel);
+  border-radius: 8px;
+  font-weight: 500;
+  margin: 0px 20px;
+  
+}
+
+.btn_inicio:hover{
+  color: rgb(255, 255, 255);
+  background: var(--purpura_pastel);
+}
+
+
+/*BOTON GESTIONAR MULTIMEDIA*/
+.btn_gestionar{
+  background-color: #fff;
+  padding-left: 10px;
+  display: block;
+  padding: 8px 40px;
+  border: 2px solid var(--purpura_pastel);
+  border-radius: 8px;
+  font-weight: 500;
+  margin: 0px 20px;
+  height: 45px;
+  
+}
+
+.btn_gestionar:hover{
+  color: rgb(255, 255, 255);
+  background: var(--purpura_pastel);
+}
+
+
+.dropdown {
+  background-color: #ffffff;
+  padding-left: 10px;
+  display: block;
+  border-radius: 8px;
+  font-weight: 500;
+  margin: 0px 20px;
+}
+.dropdown-content {
+  
+  display: none;
+  position: absolute;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+
+  display: block;
+  color: #000000;
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: rgb(117, 5, 117);
+}
+
+
+
+/*FORMULARIO*/
+
+
+.form{
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  background-size: cover;
+}
+
+.formulario{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.form-registro {
+  background: #f2f1f8;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: rgb(16, 16, 16);
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-registro h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #595b61;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.form-registro p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-registro a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.form-registro a:hover {
+  color: rgb(224, 11, 11);
+  text-decoration: underline;
+}
+
+.form-registro .botons {
+  display: block;
+  width: 150px;
+  margin-top: 40px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 500;
+  background: var(--purpura_pastel);
+  color: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+
+.form-registro .botons:hover{
+  background: transparent;
+  border: 2px solid var(--purpura_pastel) ;
+  color: var(--purpura_pastel);
+}
+
+.submit {
+  display: flex;
+  flex-direction:row;
+
+}
+
+
+/*Tabla de Usuarios*/
+
+.styled-table { 
+  width: 100%;
+  display: block;
+  border-collapse: collapse; 
+  margin: 25px 0; 
+  font-size: 1rem; 
+  font-family: sans-serif;  
+
+}
+
+.styled-table thead tr { 
+  background-color: #3d9deb7e; 
+  color: #ffffff; 
+  text-align: middle; 
+}
+
+.styled-table th, .styled-table td { 
+  padding: 12px 15px; 
+  width: fit-content;
+}
+
+.styled-table tbody tr { 
+  border-bottom: 1px solid #dddddd; 
+} 
+
+.styled-table tbody tr:nth-of-type(even) { 
+  background-color: #b9b9b9; 
+} 
+
+
+
+
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    padding-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    
+}
+
+main{
+    padding: 10px;
+}
+
+
+:root{
+    --purpura_pastel: #6d50e1;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-right: 200px;
+    padding-left: 20px;
+
+}
+
+.logo img{
+    width: 200px;
+
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+}
+
+
+.menu nav ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    position: relative;
+}
+
+
+.menu nav ul li a:hover{
+    color: var(--purpura_pastel);
+}
+
+
+/* BOTON BUSQUEDA*/
+
+.container-1{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+  }
+
+
+  .container-1 input#search{
+    width: 300px;
+    height: 50px;
+    background: #4545461e;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+
+
+    
+  }
+
+
+  .container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+ .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+ .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+ .container-1 input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+ .container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }
+
+  .container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+
+
+
+/*BOTON CERRAR SEION*/
+.btn_inicio{
+    padding-left: 10px;
+    display: block;
+    padding: 8px 20px;
+    border: 2px solid var(--purpura_pastel);
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 0px 20px;
+    
+}
+
+.btn_inicio:hover{
+        color: rgb(255, 255, 255);
+    background: var(--purpura_pastel);
+}
+
+
+/*CAJITAS DE MENSAJES MOTIVACIONALES*/
+
+
+.cajitas__mensaje {
+  display: flex;
+  flex-direction:row;
+  padding-left:90px;
+  padding-bottom: 25px;
+  padding-top: 30px;
+  gap: 35px;
+}
+.mensajito {
+  width: 390px;
+  height: 140px;
+  background-color: #8561e915;
+  text-align: center;
+  border: 10px solid #8561e915;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 10px #bbb, inset -5px -5px 10px #fff;
+  transition: 0.5s;
+}
+
+.mensajito:hover {
+  height: 254px;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  background-color: #eee;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
+}
+
+.icons img{
+  width: 70px;
+
+}
+
+.mensaje {
+  color: #020202;
+  background-color: #eee;
+  padding: 10px;
+  margin: 5px 20px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
+  transform: translateY(-80px) scale(0);
+  transition: all 0.5s;
+}
+
+.mensajito:hover .mensaje {
+  transform: translateY(0) scale(1)
+}
+
+.mensaje h3 {
+  text-shadow: 2px 2px 0px #fff;
+}
+
+
+
+
+
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+}
