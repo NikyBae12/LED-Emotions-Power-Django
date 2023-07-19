@@ -4,7 +4,17 @@ from. import views
 
 
 urlpatterns = [
-    path('', views.principal, name = 'principal'),
+    path('', views.index, name = 'index'),
+    path('login/', views.login, name = 'login'),
+    path('servicio/', views.servicio, name = 'servicio'),
+    path('registrarse/', views.registrarse, name = 'registrarse'),
+    path('principalUser/', views.principalUser, name = 'principalUser'),
+    path('principalAdmin/', views.principalAdmin, name = 'principalAdmin'),
+    path('nosotros/', views.nosotros, name = 'nosotros'),
+    path('cromoterapia/', views.cromoterapia, name = 'cromoterapia'),
+    path('recuperarPass/', views.recuperarPass, name = 'recuperarPass'),
+    path('codigoCuenta/', views.codigoCuenta, name = 'codigoCuenta'),
+    path('cambiarPass/', views.cambiarPass, name = 'cambiarPass'),
 
     #USUARIOS
     path('usuario',listarUsuario.as_view(), name = "usuario"),

@@ -7,7 +7,7 @@ class Usuario(models.Model):
     nombres = models.CharField(max_length=255)
     apellidos = models.CharField(max_length=255)
     contraseña= models.CharField(max_length=15)
-    fechaN = models.CharField(max_length=10)
+    fechaN = models.DateField()
     codigoVer = models.CharField(max_length=10)
     img_perfil = models.CharField(max_length=255)
     estado_cu = models.CharField(max_length=255)

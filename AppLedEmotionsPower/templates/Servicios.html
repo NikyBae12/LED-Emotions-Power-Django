@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/servicio.css">
+    <link rel="stylesheet" href="{% static 'css/servicio.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'img/loto333.png' %}" sizes="16x16 24x24 36x36 48x48">
     <title>Nuestros Servicios</title>
 </head>
 <body>
@@ -14,23 +15,23 @@
     <header>
         <div class="contenedor__header">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logoblanco.jpg" alt="">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logoblanco.jpg' %}" alt="">
                 </a>
             </div>
 
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
-                        <li><a href="cromoterapia.html">¿Qué es Cromoterapia?</a></li>
-                        <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
-                        <!--<li><a href="Bucar.html">Buscar</a></li>-->
-                    </ul>
+                      <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                      <li><a href="{% url 'servicio' %}">Nuestros Servicios</a></li>
+                      <li><a href="{% url 'cromoterapia' %}">¿Qué es Cromoterapia?</a></li>
+                      <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
+                      <!--<li><a href="Bucar.html">Buscar</a></li>-->
+                  </ul>
                 </nav>
 
-                <a href="login.html" class="btn_inicio">Iniciar Sesión</a>
+                <a href="{% url 'login' %}" class="btn_inicio">Iniciar Sesión</a>
                 
             </div>
         </div>

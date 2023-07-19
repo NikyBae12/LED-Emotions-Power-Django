@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,12 @@
     <title>Registrarse</title>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
-    <link rel="stylesheet" href="CSS/registrarse.css">
+    <link rel="stylesheet" href="{% static 'CSS/registrarse.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'img/loto333.png' %}" sizes="16x16 24x24 36x36 48x48">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="JS/gestionRegistro.js" defer></script>
+    <script src="{% static 'JS/gestionRegistro.js' %}" defer></script>
 </head>
 <body>
 
@@ -20,17 +21,17 @@
     <header>
         <div class="contenedor__header">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logoblanco.jpg" alt="">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logoblanco.jpg' %}" alt="">
                 </a>
             </div>
 
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
-                        <li><a href="cromoterapia.html">¿Qué es Cromoterapia?</a></li>
+                        <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                        <li><a href="{% url 'servicio' %}">Nuestros Servicios</a></li>
+                        <li><a href="{% url 'cromoterapia' %}">¿Qué es Cromoterapia?</a></li>
                         <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
                         <!--<li><a href="Bucar.html">Buscar</a></li>-->
                     </ul>
@@ -76,7 +77,7 @@
                 <div id="divRegistrar" class="inputBox">
                 <input id="registrar" type="button" value="Registrarse">
                 </div>
-                <p id="forget"><a href="login.html">¿Ya tienes una cuenta?<br>Inicia Sesión aquí.</a></p>
+                <p id="forget"><a href="{% url 'login' %}">¿Ya tienes una cuenta?<br>Inicia Sesión aquí.</a></p>
             </form>
             </div>
         </div>

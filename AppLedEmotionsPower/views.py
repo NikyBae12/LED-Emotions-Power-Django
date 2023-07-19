@@ -43,8 +43,38 @@ def consultaemo_multi(request):
     return render(request,"EmoMulti.html", {"cli":listaremo_multi})
 
 
-def principal(request):
+def index(request):
     return render(request, 'index.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def servicio(request):
+    return render(request, 'Servicios.html')
+
+def registrarse(request):
+    return render(request, 'registrarse.html')
+
+def principalUser(request):
+    return render(request, 'principalUser.html')
+
+def principalAdmin(request):
+    return render(request, 'principalAdmin.html')
+
+def nosotros(request):
+    return render(request, 'nosotros.html')
+
+def cromoterapia(request):
+    return render(request, 'cromoterapia.html')
+
+def recuperarPass(request):
+    return render(request, 'recuperarContraseña.html')
+
+def codigoCuenta(request):
+    return render(request, 'CodigoCuenta.html')
+
+def cambiarPass(request):
+    return render(request, 'cambiarContraseña.html')
 
 #---------------------------------METODOS------------------------------
 #---------------------------------METODOS USUARIO------------------------------
@@ -57,7 +87,13 @@ class listarUsuario(View):
     def get(self, request):
         datos = Usuario.objects.all().values()
         datosCli = list(datos)
-        return JsonResponse(datosCli, safe=False)    
+        return JsonResponse(datosCli, safe=False) 
+
+class buscarxCorreo(View):
+    def get(self, request):
+        usuario = Usuario.objects.filter()
+        datosUser = list(usuario)
+        return JsonResponse(datosUser, safe=False) 
     
 
 class InsertarUsuario(View):

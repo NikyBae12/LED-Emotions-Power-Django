@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'img/loto333.png' %}" sizes="16x16 24x24 36x36 48x48">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <script src="JS/java_led.js" defer></script>
+    <script src="{% static 'JS/java_led.js' %}" defer></script>
     <script src="https://kit.fontawesome.com/c77f95377c.js" crossorigin="anonymous"></script>
     <title>LED: Emotions Power</title>
 </head>
@@ -17,23 +18,23 @@
     <header>
         <div class="contenedor__header">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logoblanco.jpg" alt="">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logoblanco.jpg' %}" alt="">
                 </a>
             </div>
 
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
-                        <li><a href="cromoterapia.html">¿Qué es Cromoterapia?</a></li>
+                        <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                        <li><a href="{% url 'servicio' %}">Nuestros Servicios</a></li>
+                        <li><a href="{% url 'cromoterapia' %}">¿Qué es Cromoterapia?</a></li>
                         <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
                         <!--<li><a href="Bucar.html">Buscar</a></li>-->
                     </ul>
                 </nav>
 
-                <a href="login.html" class="btn_inicio">Iniciar Sesión</a>
+                <a href="{% url 'login' %}" class="btn_inicio">Iniciar Sesión</a>
                 
             </div>
         </div>
@@ -50,10 +51,10 @@
                        sus emociones, de tal manera busca no solo ser un medio de relajación, sino también un
                         escape del estrés y otras emociones negativas que sobrellevan las personas.
                     </p>
-                    <a href="registrarse.html" class="btn__text-inicio">Registrate</a>
+                    <a href="{% url 'registrarse'%}" class="btn__text-inicio">Registrate</a>
                 </section>
                 <section class="img__inicio">
-                    <img src="img/renace6.png" alt="">
+                    <img src="{% static 'img/renace6.png' %}" alt="">
 
                 </section>
 
@@ -69,14 +70,14 @@
                 </div>
                 <div class="container__trust container__box-cardPrimary">
                     <div class="card__trust box__card-primary">
-                        <a href="Servicios.html">
-                            <img class="img" src="img/ficha2.png" alt="">
+                        <a href="{% url 'servicio' %}">
+                            <img class="img" src="{% static 'img/ficha2.png' %}" alt="">
                             <h2>Servicios</h2>
                         </a>
                     </div>
                     <div class="card__trust box__card-primary">
-                        <a href="cromoterapia.html">
-                            <img class="img" src="img/ficha1.png" alt="">
+                        <a href="{% url 'cromoterapia' %}">
+                            <img class="img" src="{% static 'img/ficha1.png' %}" alt="">
                             <h2>Cromoterapia</h2>
                         </a>
                     </div>
@@ -92,7 +93,7 @@
         <div class="contenido1">
             <div class="colores">
                 <section class="img_contenido">
-                    <img src="img/img3.png" alt="">
+                    <img src="{% static 'img/img3.png' %}" alt="">
                 </section>
                 <section class="text_contenido">
                     <h2>Los colores influyen en nuestra vida mucho más de lo que piensas.</h2>
@@ -107,7 +108,7 @@
                     <h2>Aprende como la psicología del color puede cambiar tu vida por medio de las luces LED.</h2>
                 </section>
                 <section class="img_contenido">
-                    <img src="img/img2.png" alt="">
+                    <img src="{% static 'img/img2.png' %}" alt="">
                 </section>
             </div>
         </div>
@@ -116,7 +117,7 @@
         <div class="contenido3">
             <div class="terapia">
                 <section class="img_contenido">
-                    <img src="img/img1.png" alt="">
+                    <img src="{% static 'img/img1.png' %}" alt="">
                 </section>
                 <section class="text_contenido">
                     <h2>Descubre como la cromoterapia puede convertirte en una persona totalmente nueva.</h2>
@@ -133,7 +134,7 @@
 		<div class="overlay" id="overlay">
 			<div class="popup" id="popup">
 
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<a id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 				<h3>¡Bienvenido!</h3>
 				<h4 class="inicio">Te encuentras en LED: Emotions Power, tu herramienta personalizada para mejorar el control de las emociones.</h4>
 				<img src="https://3.bp.blogspot.com/-j3NVG6VTQ34/XAHk5OhWC2I/AAAAAAAABfM/B9nhC1eOZ0wJtHQMEfJwdUmXvxCJXFdNACLcBGAs/s1600/emociones.gif" class="intensamente">

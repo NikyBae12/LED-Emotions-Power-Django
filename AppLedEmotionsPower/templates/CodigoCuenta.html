@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'img/loto333.png' %}" sizes="16x16 24x24 36x36 48x48">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
-    <link rel="stylesheet" href="CSS/CodigoCuenta.css">
+    <link rel="stylesheet" href="{% static 'CSS/CodigoCuenta.css'}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -21,17 +22,17 @@
     <header>
         <div class="contenedor__header">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logoblanco.jpg" alt="">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logoblanco.jpg' %}" alt="">
                 </a>
             </div>
 
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Nosotros</a></li>
-                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
-                        <li><a href="cromoterapia.html">¿Qué es Cromoterapia?</a></li>
+                        <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                        <li><a href="{% url 'servicio' %}">Nuestros Servicios</a></li>
+                        <li><a href="{% url 'cromoterapia' %}">¿Qué es Cromoterapia?</a></li>
                         <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
                         <!--<li><a href="Bucar.html">Buscar</a></li>-->
                     </ul>
@@ -65,7 +66,7 @@
                     <a class="enviarCode">ENVIAR</a>
                 </div>
                 
-                <p class="forget">¿Ya tienes cuenta?<a href="login.html">INICIAR SESIÓN</a></p>
+                <p class="forget">¿Ya tienes cuenta?<a href="{% url 'login' %}">INICIAR SESIÓN</a></p>
                 <p class="info">*Recuerda revisar la sección de Spam por si no encuentras el correo de Verificación.</p>
             </form>
             </div>

@@ -7,7 +7,7 @@
     <title>Agregar Sesión Terapia</title>
 
     <link rel="stylesheet" href="agregarSesionTerapia.css">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static '/img/loto333.png' %}" sizes="16x16 24x24 36x36 48x48">
 
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <a href="login.html" class="btn_inicio">Cerrar Sesión</a>
+            <a href="{% url 'login' %}" class="btn_inicio">Cerrar Sesión</a>
 
 
 
