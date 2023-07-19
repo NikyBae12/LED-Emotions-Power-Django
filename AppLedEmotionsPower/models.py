@@ -3,14 +3,14 @@ from django.db import models
 # Create your models here.
 
 class Usuario(models.Model):
-    Id_usuario = models.CharField(primary_key=True, max_length=20)
+    idUsuario = models.CharField(primary_key=True, max_length=20)
     nombres = models.CharField(max_length=255)
-    apellidos = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
     contraseña= models.CharField(max_length=15)
     fechaN = models.DateField()
-    codigoVer = models.CharField(max_length=10)
-    img_perfil = models.CharField(max_length=255)
-    estado_cu = models.CharField(max_length=255)
+    codVerif = models.CharField(max_length=10)
+    imgPerfil = models.CharField()
+    estadoCuenta = models.CharField(max_length=255)
 
 
     def __str__(self):
@@ -18,10 +18,10 @@ class Usuario(models.Model):
         return txt.format(self.Id_usuario,self.nombres, self.apellidos, self.contraseña, self.fechaN, self.codigoVer, self.img_perfil, self.estado_cu)
 
 
-class Comprbante(models.Model):
-    Id_Comrpobante = models.CharField(primary_key=True, max_length=255)
-    Id_usuario = models.ForeignKey(Usuario, null=True, on_delete=models.CASCADE)
-    fecha_autu = models.CharField(max_length=10)
+class Comprobante(models.Model):
+    idComprobante = models.AutoField(primary_key=True)
+    idUsuario = models.ForeignKey(Usuario, null=True)
+    fechaActu = models.DateField()
     factura = models.CharField(max_length=255)
     valor = models.IntegerField()
 
@@ -30,10 +30,10 @@ class Comprbante(models.Model):
         return txt.format(self.Id_Comrpobante,self.Id_usuario, self.fecha_autu, self.factura, self.valor)
 
 
-class Conexion_LED(models.Model):
-    Id_conexion = models.IntegerField(primary_key=True)
-    Id_led = models.CharField(max_length=255)
-    C_estado = models.BooleanField()
+class ConexionLED(models.Model):
+    idConexion = models.AutoField(primary_key=True)
+    idLed = models.CharField(max_length=255)
+    cEstado = models.BooleanField()
 
     def __str__(self):
         txt ="{0}{1}"
@@ -41,13 +41,12 @@ class Conexion_LED(models.Model):
 
 
 
-class Sesion_terapia(models.Model):
-    Id_sesion = models.IntegerField(primary_key=True)
-    Id_conexion = models.ForeignKey(Conexion_LED, null=True, on_delete=models.CASCADE)
-    Id_usuario = models.ForeignKey(Usuario, null=True, on_delete=models.CASCADE)
-    Id_emocion = models.IntegerField()
-    fecha_sesi = models.DateField()
-    nivel_satif = models.IntegerField()
+class SesionTerapia(models.Model):
+    idSesion = models.AutoField(primary_key=True)
+    idConexion = models.ForeignKey(ConexionLED, null=True)
+    idUsuario = models.ForeignKey(Usuario, null=True)
+    fechaSesion = models.DateField()
+    nivelSatis = models.IntegerField()
 
     def __str__(self):
         txt ="{0}{1}"
@@ -55,11 +54,13 @@ class Sesion_terapia(models.Model):
 
 
 
-class Emociones(models.Model):
-    Id_emocion = models.IntegerField(primary_key=True)
-    E_nombre = models.CharField(max_length=255)
-    E_coloBsc = models.CharField(max_length=255)
-    E_estadoA = models.BooleanField()
+class Emocion(models.Model):
+    idEmocion = models.AutoField(primary_key=True)
+    eNombre = models.CharField(max_length=255)
+    eColorRed = models.IntegerField()
+    eColorGreen = models.IntegerField()
+    eColorBlue = models.IntegerField()
+    eEstadoA = models.BooleanField()
 
     def __str__(self):
         txt ="{0}{1}"
@@ -67,10 +68,10 @@ class Emociones(models.Model):
 
 
 
-class sesion_Emo(models.Model):
-    Id_sesion_emo = models.IntegerField(primary_key=True)
-    Id_sesion = models.ForeignKey(Sesion_terapia, null=True, on_delete=models.CASCADE)
-    Id_emocion = models.ForeignKey(Emociones, null=True, on_delete=models.CASCADE)
+class SesionEmo(models.Model):
+    idSeEmo = models.AutoField(primary_key=True)
+    iDSesion = models.ForeignKey(SesionTerapia, null=True)
+    idEmocion = models.ForeignKey(Emocion, null=True)
 
     def __str__(self):
         txt ="{0}{1}"
@@ -94,7 +95,7 @@ class Multimedia(models.Model):
 
 class emo_multi(models.Model):
     Id_emo_multi = models.IntegerField(primary_key=True)
-    Id_emocion = models.ForeignKey(Emociones, null=True, on_delete=models.CASCADE)
+    Id_emocion = models.ForeignKey(Emocion, null=True, on_delete=models.CASCADE)
     Id_elemento = models.ForeignKey(Multimedia, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
