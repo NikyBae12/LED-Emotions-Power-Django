@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+    <link rel="stylesheet" href="CSS/registrarse.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="JS/gestionRegistro.js" defer></script>
+</head>
+<body>
+
+    <!--Menu-->
+    <header>
+        <div class="contenedor__header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logoblanco.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="Servicios.html">Nuestros Servicios</a></li>
+                        <li><a href="cromoterapia.html">¿Qué es Cromoterapia?</a></li>
+                        <!--<li><a href="Eliminar.html">Eliminar</a></li>-->
+                        <!--<li><a href="Bucar.html">Buscar</a></li>-->
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:4;"></div>
+        <div class="container">
+            <div class="from">
+            <h2>Registrarse</h2>
+            <form>
+                <div id="divDocumento" class="inputBox">
+                <input id="documento" type="number" placeholder="Documento">
+                </div>
+                <div class="inputBox">
+                <input id="nombre" type="text" placeholder="Nombre Usuario" maxlength="10">
+                </div>
+                <div id="divCorreo" class="inputBox">
+                <input id="email" type="email" placeholder="Email">
+                </div>
+                <div id="divContraseña" class="inputBox">
+                <input id="contraseña" type="password" placeholder="Contraseña">
+                </div>
+                <div id="divConfirmacion" class="inputBox">
+                <input id="confirmacion" type="password" placeholder="Confirmación Contraseña">
+                </div>
+                <div class="inputBox">
+                <input id="fechaN" type="date">
+                </div>
+                <div id="divNull" class="inputBox"></div>
+                <div id="divRegistrar" class="inputBox">
+                <input id="registrar" type="button" value="Registrarse">
+                </div>
+                <p id="forget"><a href="login.html">¿Ya tienes una cuenta?<br>Inicia Sesión aquí.</a></p>
+            </form>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Administrador</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/principalAdmin.css">
+    <script src="/JS/cerrarSesión.js" defer></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+
+        <div class="logo">
+            <a href="principalAdmin.html">
+                <img src="img/nameb.jpg" alt="">
+            </a>
+        </div>
+
+
+        <div class="menu">
+
+            
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+              </div>
+
+
+
+            <a class="btn_inicio">Cerrar Sesión</a>
+
+
+
+            
+        </div>
+
+
+    </header>
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i><img src="img/loto11.png"></i>
+            <h4>LED EMOTIONS POWER</h4>
+        </div>
+
+        <div class="options__menu">	
+
+            <a href="principalAdmin.html" class="selected">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="Form_Usuarios/usuario.html">
+                <div class="option">
+                    <i class="far fa-user" title="Usuarios"></i>
+                    <h4>Usuarios</h4>
+                </div>
+            </a>
+            
+            <a href="Form_SesionTerapia/SesionTerapia.html">
+                <div class="option">
+                    <i class="fas fa-heart" title="Terapia"></i>
+                    <h4>Sesión Terapia</h4>
+                </div>
+            </a>
+
+            <a href="Form_Emociones/emociones.html">
+                <div class="option">
+                    <i class="far fa-smile" title="Blog"></i>
+                    <h4>Emociones</h4>
+                </div>
+            </a>
+
+            <a href="Form_Multimedia/Multimedia.html">
+                <div class="option">
+                    <i class="fa fa-play" title="Contacto"></i>
+                    <h4>Multimedia</h4>
+                </div>
+            </a>
+
+            <a href="Form_ConexionLed/ConexionLed.html">
+                <div class="option">
+                    <i class="fa fa-lightbulb-o" title="Nosotros"></i>
+                    <h4>Conexión LED</h4>
+                </div>
+            </a>
+
+            <a href="Form_Configuración/configuracion.html">
+                <div class="option">
+                    <i class="fa fa-cog" title="Nosotros"></i>
+                    <h4>Configuración</h4>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <main>
+        <div class="cards">
+            <div class="card amarrillo">
+
+                <div class="usuarios">
+                    <a href="/Form_Usuarios/usuario.html">
+                        <img src="https://fececo.org.ar/wp-content/uploads/2022/06/personas-usuarios.png" alt="">
+                    </a>
+                </div>
+                
+                <p class="tip">Gestión Usuarios</p>
+                <p class="second-text">Usuarios - Comprobantes</p>
+                
+            </div>
+            <div class="card azul">
+
+                <div class="sesiones">
+                    <a href="/Form_SesionTerapia/SesionTerapia.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6371/6371120.png" alt="">
+                    </a>
+                </div>
+                <p class="tip">Gestión Sesiones de Terapia</p>
+                <p class="second-text">Sesiones - Sesión-Emoción</p>
+            </div>
+
+            <div class="card rosa">
+                <div class="emociones">
+                    <a href="/Form_Emociones/emociones.html">
+                        <img src="https://www.pngplay.com/wp-content/uploads/12/Inside-Out-PNG-HD-Images.png" alt="">
+                    </a>
+                </div>
+                <p class="tip">Gestión Emociones</p>
+                <p class="second-text">Emociones</p>
+            </div>
+            <div class="card verde">
+                <div class="multimedia">
+                    <a href="/Form_Multimedia/Multimedia.html">
+                        <img src="img/musica.png" alt="">
+                    </a>
+                </div>
+                <p class="tip">Gestión Multimedia</p>
+                <p class="second-text">Multimedia - Emocion-Multimedia</p>
+            </div>
+
+            <div class="card gris">
+                <div class="videos">
+                    <a href="#">
+                        <img src="https://images.vexels.com/media/users/3/153551/isolated/preview/3c6ae204fe819fa44fa0afe6e35bf8b5-icono-de-conexion-empresarial.png" alt="">
+                    </a>
+                </div>
+                <p class="tip">Gestión Conexiones LED</p>
+                <p class="second-text">Conexiones con Dispositivo LED</p>
+            </div>
+        </div>
+
+    </main>
+
+   
+    <script src="JS/scrip.js"></script>
+</body>
+</html>

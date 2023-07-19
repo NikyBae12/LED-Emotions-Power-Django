@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+  
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  :root{
+      --purpura_pastel: #6d50e1;
+      --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+      --color_text-primary: #AB29CA;
+      --text_paragraph: 16px;
+      --text_size_title: 40px;
+      --color_text-secundary: #101E2C;
+  }
+  
+  
+  body {
+      font-family: 'open sans';
+    }
+    
+    .contenedor {
+      padding: 60px 0;
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+    }
+    
+    .titulo {
+      color: #642a73;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 60px;
+      margin-top: 30px;
+    }
+    
+    
+  main {
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+
+  /* NUESTRO NOMBRE */
+  
+  
+  .contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+
+  .content-img {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-about-us{
+    width: 100%;
+  }
+  
+  .sobre-nosotros .contenido-textos{
+    width: 48%;
+  }
+  
+  .contenido-textos h3{
+    margin-bottom: 15px;
+  }
+  
+  .contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+  }
+  
+  .contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*  CARDS MISION Y VISION*/
+    /*MISION*/
+
+  .myCard {
+    background-color: transparent;
+    width: 590px;
+    height: 454px;
+    perspective: 1000px;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: rgba(255, 255, 255, 0.952);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+  }
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  }
+  
+  .backSide {
+    padding: 5%;
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+
+
+
+  /*VISION*/
+
+  .myCard2 {
+    background-color: transparent;
+    width: 590px;
+    height: 454px;
+    perspective: 1000px;
+  }
+  
+  .title2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard2:hover .innerCard2 {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide2,
+  .backSide2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: rgba(255, 255, 255, 0.973);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide2,
+  .frontSide2::before {
+        background-image: linear-gradient(43deg, rgb(65, 208, 148) 0%, rgb(80, 172, 200) 46%, rgb(255, 198, 112) 100%)
+  }
+  
+  .backSide2,
+  .backSide2::before {
+    background: linear-gradient(43deg, rgba(65, 89, 208, 0.404) 0%, rgba(200, 80, 192, 0.37) 46%, rgb(255, 204, 112) 100%);
+  }
+  
+  .backSide2 {
+    padding: 5%;
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide2::before,
+  .backSide2::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }

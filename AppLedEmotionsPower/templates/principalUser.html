@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED: Emotions Power</title>
+
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="css/principalUser.css">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+
+        <div class="logo">
+            <a href="/principalUser.html">
+                <img src="/img/nameb.jpg" alt="">
+            </a>
+        </div>
+
+
+        <div class="menu">
+
+            
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+              </div>
+
+            <a href="/login.html" class="btn_inicio">Cerrar Sesión</a>
+
+
+
+            
+        </div>
+
+
+    </header>
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i><img src="/img/loto11.png"></i>
+            <h4>LED EMOTIONS POWER</h4>
+        </div>
+
+        <div class="options__menu">	
+
+            <a href="/principalUser.html" class="selected">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="option">
+                    <i class="fa fa-lightbulb-o" title="Sesión Terapia"></i>
+                    <h4>Sesión Terapia</h4>
+                </div>
+            </a>
+            
+            <a href="/Usuario_Contenido/datosMultimedia.html">
+                <div class="option">
+                    <i class="fa fa-spinner" title="Multimedia"></i>
+                    <h4>Multimedia</h4>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="option">
+                    <i class="fa fa-bluetooth-b" title="Conexión LED"></i>
+                    <h4>Conexión LED</h4>
+                </div>
+            </a>
+
+            <a href="/Usuario_Contenido/configuracion.html">
+                <div class="option">
+                    <i class="fa fa-cog" title="Configuración"></i>
+                    <h4>Configuración</h4>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <main>
+
+            <div class="carousel-container">
+              <img class="carousel-img active" src="https://grupo-pya.com/wp-content/uploads/2021/10/Control-de-las-emociones-en-el-trabajo.jpg" alt="Imagen 1">
+              <img class="carousel-img" src="https://www.flich.org/wp-content/uploads/2021/10/01-En-sus-zapatos.jpg.webp" alt="Imagen 2">
+              <img class="carousel-img" src="https://static.vecteezy.com/system/resources/previews/005/533/317/non_2x/woman-meditating-in-peaceful-yoga-and-healthy-lifestyle-meditation-people-pose-spiritual-relax-flat-cartoon-design-vector.jpg" alt="Imagen 3">
+          
+              <a class="carousel-arrow prev" onclick="changeSlide(-1)">&#10094;</a>
+              <a class="carousel-arrow next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+
+
+
+            <div class="container">
+                <div class="card">
+                  <div class="icon">
+                    <ion-icon name="happy-outline"></ion-icon>
+                  </div>
+                  <div class="content">
+                    <h2>Entiende Tus Emociones</h2>
+                    <p>Tomate un tiempo para analizar y reflexionar como te sientes, Intenta descubir la razón de porque reaccionas de cierta forma ante algunas situaciones</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon">
+                    <ion-icon name="diamond-outline"></ion-icon>
+                  </div>
+                  <div class="content">
+                    <h2>Aceptate Como Eres</h2>
+                    <p>Trabaja en la autoaceptación, en quererte tal y como eres. Si no, desarrollarás una mentalidad defensiv, que no ayuda al equ</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon">
+                    <ion-icon name="rocket-outline"></ion-icon>
+                  </div>
+                  <div class="content">
+                    <h2>No Tomes A Mal Las Criticas</h2>
+                    <p>Debes encontrar la forma de recibir los consejos y criticas en forma de reflexión</p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </main>
+
+ 
+  <script src="JS/scrip.js"></script>
+
+
+
+  <script>
+          // Función para cambiar de diapositiva
+          let slideIndex = 0;
+          showSlide(slideIndex);
+
+          function changeSlide(n) {
+          showSlide(slideIndex += n);
+          }
+
+          function showSlide(n) {
+          const slides = document.getElementsByClassName("carousel-img");
+
+          if (n >= slides.length) {
+              slideIndex = 0;
+          } else if (n < 0) {
+              slideIndex = slides.length - 1;
+          }
+
+          for (let i = 0; i < slides.length; i++) {
+              slides[i].classList.remove("active");
+          }
+
+          slides[slideIndex].classList.add("active");
+          }
+         
+  </script>
+</body>
+</html>

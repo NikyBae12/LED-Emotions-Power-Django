@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Usuarios</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/CSS/menu.css">
+    <link rel="stylesheet" href="listarUsuario.css">
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/img/loto333.png" sizes="16x16 24x24 36x36 48x48">
+
+    <script src="/Form_Usuarios/Procesos/JS/gestionUsuario.js" defer></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+
+        <div class="logo">
+            <a href="/principalAdmin.html">
+                <img src="/img/nameb.jpg" alt="">
+            </a>
+        </div>
+
+
+        <div class="menu">
+
+            
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+              
+            </div>
+
+
+
+            <div class="dropdown">
+                <a class="btn_gestionar">Gestionar</a>
+                <div class="dropdown-content">
+                    <a href="../usuarios.html">Principal</a>
+                    <a href="listarUsuario.html">Listar Usuarios</a>
+                    <a href="../Agregar/agregarUsuario.html">Agregar</a>
+                    <a href="../Actualizar/actualizarUsuario.html">Actualizar</a>
+                    <a href="../Eliminar/eliminarUsuario.html">Eliminar</a>
+
+                </div>
+            </div>
+            
+
+            <a href="/login.html" class="btn_inicio">Cerrar Sesión</a>
+            
+        </div>
+
+    </header>
+
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i><img src="/img/loto11.png"></i>
+            <h4>LED EMOTIONS POWER</h4>
+        </div>
+
+        <div class="options__menu">	
+
+            <a href="/principalAdmin.html">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="/Form_Usuarios/usuario.html" class="selected">
+                <div class="option">
+                    <i class="far fa-user" title="Usuarios"></i>
+                    <h4>Usuarios</h4>
+                </div>
+            </a>
+            
+            <a href="/Form_SesionTerapia/SesionTerapia.html">
+                <div class="option">
+                    <i class="fas fa-heart" title="Terapia"></i>
+                    <h4>Sesión Terapia</h4>
+                </div>
+            </a>
+
+            <a href="/Form_Emociones/emociones.html">
+                <div class="option">
+                    <i class="far fa-smile" title="Blog"></i>
+                    <h4>Emociones</h4>
+                </div>
+            </a>
+
+            <a href="/Form_Multimedia/Multimedia.html">
+                <div class="option">
+                    <i class="fa fa-play" title="Contacto"></i>
+                    <h4>Multimedia</h4>
+                </div>
+            </a>
+
+            <a href="/Form_ConexionLed/ConexionLed.html">
+                <div class="option">
+                    <i class="fa fa-lightbulb-o" title="Nosotros"></i>
+                    <h4>Conexión LED</h4>
+                </div>
+            </a>
+
+            <a href="/Form_Configuración/configuracion.html">
+                <div class="option">
+                    <i class="fa fa-cog" title="Nosotros"></i>
+                    <h4>Configuración</h4>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <main>
+        <h1 >Listado de Usuarios</h1>
+        <div class="form">
+            <div class="formulario">
+                <section class="form-registro">
+                    <h4>Buscar x ID</h4>
+                    <input class="controls" type="number" name="id" id="id" placeholder="Ingrese el ID">
+
+                </section>
+                <section class="form-registro">
+                    <h4>Buscar x Correo</h4>
+                    <input class="controls" type="text" name="correo" id="correo" placeholder="Ingrese el Correo">
+
+                </section>
+                <section class="form-registro">
+                    <h4>Buscar x Estado</h4>
+                    <select class="controls" id="estado" name="estado">
+                        <option value="">Estado de Cuenta</option>
+                        <option value="Invitado">Invitado</option>
+                        <option value="Suscrito">Suscrito</option>
+                        <option value="MonthLED">MonthLED</option>
+                        <option value="Premium">Premium</option>
+                        <option value="LEDUser">LEDUser</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Restringido">Restringido</option>
+                    </select>
+
+                </section>
+            </div>
+        </div>
+
+        <div>
+            
+        </div>
+        <table class="styled-table" id="tablaUsuarios"> 
+            <thead> 
+                <tr> 
+                    <th>ID USUARIO</th>
+                    <th>NOMBRES</th>
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>FECHA DE NACIMIENTO</th>
+                    <th>CODIGO DE VERIFICACION</th>
+                    <th>ESTADO DE CUENTA</th>
+                    <th>IMG DE PERFIL</th>
+                </tr> 
+            </thead> 
+            <tbody id="tablaBody">
+
+            </tbody>
+
+        </table>
+    
+    </main>
+
+   
+    <script src="/JS/scrip.js"></script>
+</body>
+</html>
