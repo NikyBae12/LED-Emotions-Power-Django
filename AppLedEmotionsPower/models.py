@@ -81,11 +81,11 @@ class SesionEmo(models.Model):
 
 
 class Multimedia(models.Model):
-    Id_elemento = models.IntegerField(primary_key=True)
-    Tipo_elemn = models.CharField(max_length=255)
-    ElementoM = models.CharField(max_length=255)
-    Autor = models.CharField(max_length=255)
-    M_estado = models.BooleanField()
+    idElemento = models.AutoField(primary_key=True)
+    tipoElemento = models.CharField(max_length=255)
+    elementoM = models.CharField(max_length=255)
+    autor = models.CharField(max_length=255)
+    mEstado = models.BooleanField()
 
     def __str__(self):
         txt ="{0}{1}"
@@ -94,9 +94,9 @@ class Multimedia(models.Model):
 
 
 class emo_multi(models.Model):
-    Id_emo_multi = models.IntegerField(primary_key=True)
-    Id_emocion = models.ForeignKey(Emocion, null=True, on_delete=models.CASCADE)
-    Id_elemento = models.ForeignKey(Multimedia, null=True, on_delete=models.CASCADE)
+    idEmoMulti = models.AutoField(primary_key=True)
+    idEmocion = models.ForeignKey(Emocion, null=True, on_delete=models.CASCADE)
+    idElemento = models.ForeignKey(Multimedia, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         txt ="{0}{1}"
