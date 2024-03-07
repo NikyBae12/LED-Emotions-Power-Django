@@ -5,3 +5,5 @@ LED: Emotions Power es una idea de negocio enfocada al bienestar emocional, con 
 - Paula Alejandra Castilo Peña
 - Omar Gabriel Diaz Tauta
 - Derly Yulieth Jimenez Ochoa
+
+## Proyecto SENA 2023
